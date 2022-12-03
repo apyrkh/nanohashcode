@@ -1,6 +1,6 @@
 {
   "name": "nanohashcode",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A tiny (75 bytes), string hash code implementation for JavaScript/TypeScript",
   "keywords": [
     "hash code",
