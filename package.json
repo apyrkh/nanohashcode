@@ -8,9 +8,10 @@
     "typescript"
   ],
   "scripts": {
+    "clean": "rm -R coverage",
     "benchmark": "node test/benchmark.js",
     "unit": "uvu . .test.js$",
-    "test": "npm run unit && size-limit",
+    "test": "c8 npm run unit && npm run clean && size-limit",
     "build": "terser index.browser.js -c -m -o index.js"
   },
   "type": "module",
@@ -35,6 +36,7 @@
   "devDependencies": {
     "@size-limit/preset-small-lib": "^8.1.0",
     "benchmark": "^2.1.4",
+    "c8": "^7.12.0",
     "picocolors": "^1.0.0",
     "size-limit": "^8.1.0",
     "terser": "^5.16.0",
