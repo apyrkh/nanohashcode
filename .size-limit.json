@@ -1,0 +1,15 @@
+[
+  {
+    "path": "index.js",
+    "name": "Gzipped { hashCode }",
+    "import": "{ hashCode }",
+    "limit": "75 B"
+  },
+  {
+    "path": "index.js",
+    "name": "Brotli { hashCode }",
+    "import": "{ hashCode }",
+    "brotli": true,
+    "limit": "48 B"
+  }
+]
