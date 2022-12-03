@@ -1,0 +1,38 @@
+{
+  "name": "nanohashcode",
+  "version": "1.0.0",
+  "description": "A tiny (XXX bytes), secure, string hash code implementation for JavaScript",
+  "keywords": [
+    "hash code"
+  ],
+  "scripts": {
+    "benchmark": "node test/benchmark.js",
+    "unit": "uvu . .test.js$",
+    "build": "terser index.browser.js -c -m -o index.js"
+  },
+  "type": "module",
+  "engines": {
+    "node": "^14 || ^16 || >=18"
+  },
+  "author": "Aliaksandr Pyrkh <alexpyrkh@gmail.com>",
+  "license": "MIT",
+  "repository": "apyrkh/nanohashcode",
+  "exports": {
+    ".": {
+      "browser": "./index.browser.js",
+      "default": "./index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "browser": {
+    "./index.js": "./index.browser.js"
+  },
+  "sideEffects": false,
+  "types": "./index.d.ts",
+  "devDependencies": {
+    "benchmark": "^2.1.4",
+    "picocolors": "^1.0.0",
+    "terser": "^5.16.0",
+    "uvu": "^0.5.6"
+  }
+}
