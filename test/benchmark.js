@@ -1,7 +1,7 @@
 import Benchmark from 'benchmark'
 import pico from 'picocolors'
-import { hashCode } from '../index.js'
-import { hashCode as hashCodeBrowser } from '../index.browser.js'
+import { hashCode } from '../hashCode.js'
+import { hashCode as hashCodeBrowser } from '../hashCode.browser.js'
 import { hashCode1, hashCode2, hashCode3 } from './benchmark.sandbox.js'
 
 function formatNumber (number) {

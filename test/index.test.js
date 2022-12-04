@@ -1,8 +1,8 @@
 import { test } from 'uvu'
 import { is } from 'uvu/assert'
 
-import { hashCode as hashCodeNode } from '../index.js'
-import { hashCode as hashCodeBrowser } from '../index.browser.js'
+import { hashCode as hashCodeNode } from '../hashCode.js'
+import { hashCode as hashCodeBrowser } from '../hashCode.browser.js'
 
 for (let type of ['node', 'browser']) {
   const hashCode = type === 'node' ? hashCodeNode : hashCodeBrowser

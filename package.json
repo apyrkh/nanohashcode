@@ -11,28 +11,23 @@
     "clean": "rm -R coverage",
     "benchmark": "node test/benchmark.js",
     "unit": "uvu . .test.js$",
-    "test": "c8 npm run unit && npm run clean && size-limit",
-    "build": "terser index.browser.js -c -m -o index.js"
-  },
-  "type": "module",
-  "engines": {
-    "node": "^14 || ^16 || >=18"
+    "size-limit": "size-limit",
+    "test": "c8 npm run unit && size-limit && npm run clean",
+    "build": "terser hashCode.browser.js -c -m -o hashCode.js"
   },
   "author": "Aliaksandr Pyrkh <alexpyrkh@gmail.com>",
   "license": "MIT",
   "repository": "apyrkh/nanohashcode",
+  "sideEffects": false,
+  "type": "module",
+  "types": "./index.d.ts",
   "exports": {
-    ".": {
-      "browser": "./index.browser.js",
-      "default": "./index.js"
-    },
+    ".": "./index.js",
     "./package.json": "./package.json"
   },
-  "browser": {
-    "./index.js": "./index.browser.js"
+  "engines": {
+    "node": "^14.0.0 || ^16.0.0 || >=18.0.0"
   },
-  "sideEffects": false,
-  "types": "./index.d.ts",
   "devDependencies": {
     "@size-limit/preset-small-lib": "^8.1.0",
     "benchmark": "^2.1.4",
